@@ -45,17 +45,23 @@ h1 {
 }
 
 button {
-  font-size: 30px;
+  font-size: 20px;
   padding: 5px;
   width: 100px;
+  background-color: #00ff37;
 }
 
 p:hover {
   cursor: default;
 }
 
-.change-time:hover {
+.change-time {     
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
   cursor: pointer;
+  overflow: hidden;
+  outline: none;        
 }
 
 @media (max-width: 720px){

@@ -6,15 +6,16 @@
   <title>Document</title>
   <link rel='stylesheet' href='style.css'/>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <script src='script.js' defer></script>
 </head>
 <body>
   <h1>Pomodoro Timer</h1>
   <div id='main'>
     <div id='session'>
       <p>Session</p>
-      <p id='add-session-time' class='change-time'>+</p>
-      <p>25:00</p>
-      <p id='reduce-session-time' class='change-time'>-</p>
+      <button id='add-session-time' class='change-time'>+</button>
+      <p id='session-time'>25:00</p>
+      <button id='reduce-session-time' class='change-time'>-</button>
       <div id='session-buttons'>
         <button id='start-session'>Start</button>
         <button id='pause-session'>Pause</button>
@@ -23,9 +24,9 @@
     </div>
     <div id='rest'>
       <p>Rest</p>
-      <p id='add-rest-time' class='change-time'>+</p>
-      <p>5:00</p>
-      <p id='reduce-rest-time' class='change-time'>-</p>
+      <button id='add-rest-time' class='change-time'>+</button>
+      <p id='rest-time'>5:00</p>
+      <button id='reduce-rest-time' class='change-time'>-</button>
       <div id='rest-buttons'>
         <button id='start-rest'>Start</button>
         <button id='pause-rest'>Pause</button>
