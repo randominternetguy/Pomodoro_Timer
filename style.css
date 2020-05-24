@@ -6,6 +6,7 @@
 
 body {
   width: 100%;
+  height: 100%;
   background-image: linear-gradient(to right, #ff0000, #007bff);
   display: flex;
   flex-direction: column;
@@ -14,7 +15,6 @@ body {
 }
 
 h1 {
-  margin: auto;
   padding-bottom: 50px;
   color: #00ff37;
 }
@@ -22,6 +22,7 @@ h1 {
 #main {
   display: flex;
   width: 100%;
+  height: 100%;
   justify-content: space-around;
   font-size: 50px;
   margin: auto;
@@ -55,4 +56,28 @@ p:hover {
 
 .change-time:hover {
   cursor: pointer;
+}
+
+@media (max-width: 720px){
+  body {
+    font-size: 20px;
+  }
+
+  h1 {
+    padding-bottom: 10px;
+  }
+
+  #main {
+    font-size: 40px;
+    flex-direction: column;
+  }
+
+  #session, #rest {
+    padding: 10px;
+  }
+
+  button {
+    font-size: 20px;
+    width: 75px;
+  }
 }
