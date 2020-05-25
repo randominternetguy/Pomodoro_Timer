@@ -74,6 +74,9 @@ const startPomodoro = (pomodoroType) => {
   }
 }
 
+
+// event listeners for the buttons
+
 sessionStartButton.addEventListener('click', () => {
   if (!sessionIsRunning && !restIsRunning){
     startPomodoro('session')
@@ -135,3 +138,40 @@ restResetButton.addEventListener('click', () => {
     restReset = true
   }
 });
+
+
+// adding and reducing the rest and session timings.
+changeTimeButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    if (button.parentNode.id == 'session'){
+      if (sessionIsRunning){
+        return;
+      }
+      else {
+        let sessionDuration = sessionTime.textContent.split(':');
+        if (button.textContent == '+'){
+          sessionDuration[0]++;
+        }
+        else {
+          sessionDuration[0]--;
+        }
+        sessionTime.textContent = sessionDuration.join(':');
+      }
+    }
+    else {
+      if (restIsRunning){
+        return;
+      }
+      else {
+        let restDuration = restTime.textContent.split(':');
+        if (button.textContent == '+'){
+          restDuration[0]++;
+        }
+        else {
+          restDuration[0]--;
+        }
+        restTime.textContent = restDuration.join(':');
+      }
+    }
+  })
+})
